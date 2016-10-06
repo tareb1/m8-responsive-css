@@ -12,5 +12,39 @@ see http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-ele
     box-sizing: border-box;
 }
 
+.wrapper {
+  display: inline-block;
+  font-size: 2rem;
+  border: 2px solid white;
+  background: #dad9d9;
+}
 
-/* Assign styles here */
+#photo {
+  height:400px;
+  background:gray;
+}
+
+/*why not included in #photo*/
+#photo p {
+  font-size: 2rem;
+  color:white;
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .wrapper{
+    width:50%;
+  }
+
+  #photo p {
+    display: none;
+  }
+
+  #photo {
+    background-image: url('../imgs/peacock.jpeg'); /* why two dots?*/
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+}
